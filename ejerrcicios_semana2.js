@@ -72,3 +72,40 @@ if (true) {
 if (true) {
     let despedida = "Chao bro";
 }
+
+// Ejercicio 7
+
+console.log(ciudad);
+var ciudad = "Barranquilla";
+
+// Ejercicio 8
+
+saludar();
+function saludar() { console.log("Hola"); }
+
+// Ejercicio 9
+
+function cargarUsuarios(callback) {
+    console.log("Cargando..");
+    setTimeout(() => {
+        const usuarios = ["Will", "Santiago", "Fernando"];
+        callback(usuarios);
+    }, 2000);
+}
+
+cargarUsuarios((lista) => {
+    console.log("Usuarios cargados:", lista);
+});
+
+// Ejercicio 10
+
+function prepararPedido(nombre, callback) {
+    console.log("Preparando pedido..");
+    setTimeout(() => {
+        callback(nombre);
+    }, 1000);
+}
+
+prepararPedido("Juancho", (nombreCliente) => {
+    console.log(`Pedido listo para ${nombreCliente}`);
+});
